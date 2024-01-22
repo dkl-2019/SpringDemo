@@ -76,6 +76,8 @@
 * 验证：容器中有了什么组件，就具有什么功能
 
 ```java
+public class Boot302DemoApplication {
+  public static void main(String[] args) {
     // Java10：局部变量类型的自动推断
     var ioc = SpringApplication.run(Boot302DemoApplication.class, args);
     // 1、获取容器中所有组件的名字
@@ -83,11 +85,38 @@
     // 2、遍历查看
     // SpringBoot把以前配置的核心组件现在都自动配好了
     for (String name:
-        names) {
-        System.out.println(name);
+            names) {
+      System.out.println(name);
     }
+  }
+}
 ```
-![img_2.png](img_2.png)
+
+* 默认扫描规则
+  * @SpringBootApplication 标注的累就是主程序类
+  * <font color=red>SpringBoot只会扫描主程序所在的包及其下面的子包</font>，自动的componet-scan功能
+  * 自定义扫描路径
+    * @SpringBootApplication(scanBasePackages = "com.xxx") 指定即可
+    * @ComponentScan("com.xxx") 直接指定扫描的路径
+
+* 配置默认值
+  * 配置文件的所有配置项是和某个类的对象值进行一一绑定
+  * 绑定了配置文件中每一项值的类：配置属性类
+  * 比如：
+    * ServerProperties类绑定了所有Tomcat服务器有关的配置
+    * MultipartProperties类绑定了所有文件上床相关的配置
+    * .....参照[官方文档](https://docs.spring.io/spring-boot/docs/current/reference/html/application-properties.html#appendix.application-properties) 或者参照绑定的属性类
+
+* 按需加载自动配置
+  * 导入场景<font color=red>spring-boot-starter-web
+    * 场景启动器除了会导入相关功能依赖，导入一个spring-boot-starter，是所有starter的starter，基础核心starter
+    * spring-boot-starter导入了一个包 spring-boot-autoconfigure。包里面都是各种场景的AutoConfiguration自动配置类
+    * 虽然全场景的自动配置都在 spring-boot-autoconfigure这个包，但是不是全都开启的。
+    * 导入哪个场景就开启哪个自动配置
+
+**总结**：<font color=red> 导入场景启动器、触发 spring-boot-autoconfigure这个包的自动配置生效、容器中就会具有相关场景的功能
+
+
 
 
 
