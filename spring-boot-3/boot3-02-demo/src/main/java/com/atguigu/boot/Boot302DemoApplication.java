@@ -20,11 +20,12 @@ public class Boot302DemoApplication {
         // 1、获取容器中所有组件的名字
         String[] names = ioc.getBeanDefinitionNames();
         // 2、遍历查看
-        // SpringBoot把以前配置的核心组件现在都自动配好了
+        // SpringBoot   把以前配置的核心组件现在都自动配好了
         for (String name:
              names) {
             System.out.println(name);
         }
+
     }
 
 }
