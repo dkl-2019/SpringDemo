@@ -1,6 +1,6 @@
 package com.atguigu.boot.bean;
 
-public class Cat {
+public class Dog {
 
     public Long getId() {
         return id;
@@ -12,15 +12,15 @@ public class Cat {
 
     private Long id;
 
+    public Dog() {
+        this.id = id;
+    }
+
     public String getName() {
         return name;
     }
 
     public void setName(String name) {
-        this.name = name;
-    }
-
-    public Cat() {
         this.name = name;
     }
 

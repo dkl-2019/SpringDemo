@@ -114,10 +114,7 @@ public class Boot302DemoApplication {
     * 虽然全场景的自动配置都在 spring-boot-autoconfigure这个包，但是不是全都开启的。
     * 导入哪个场景就开启哪个自动配置
 
-**总结**：<font color=red> 导入场景启动器、触发 spring-boot-autoconfigure这个包的自动配置生效、容器中就会具有相关场景的功能
-
-
-
+**总结**：<font color=red> 导入场景启动器、触发 spring-boot-autoconfigure这个包的自动配置生效、容器中就会具有相关场景的功能</font>
 
 
 
