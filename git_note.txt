@@ -1,8 +1,20 @@
 C:\Windows\System32\drivers\etc
 140.82.114.4 github.com
 
-Git 2.31.1
 
+git 在更新版本或者提交代码的时候报错error: RPC failed； curl 92 HTTP/2 stream 0 was not closed cleanly: PROTOCOL_ERROR (err 1)
+	解决方案：git config --global http.version HTTP/1.1
+
+修改提交缓存区大小为20GB，或者更大的数字，该方式全局生效，一劳永逸
+	git config --global http.postBuffer 21474836480
+
+config文件中添加参数，修改暂存区大小
+[http]
+	postBuffer = 10485760000
+
+
+
+Git 2.31.1
 =================================Git=========================================
 Git工作机制：
 	工作区（写代码） ----> 暂存区（临时存储） ----> 本地库（历史版本） ----> 远程库（GitLab、GitHub、Gitee）
