@@ -3,6 +3,7 @@
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/boot3-03-logging" />
+    <file type="web" url="file://$PROJECT_DIR$/boot3-04-web" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -10,6 +11,9 @@
         <option value="$PROJECT_DIR$/boot3-01-demo/pom.xml" />
         <option value="$PROJECT_DIR$/boot3-02-demo/pom.xml" />
         <option value="$PROJECT_DIR$/boot3-03-logging/pom.xml" />
+        <option value="$PROJECT_DIR$/test_code/pom.xml" />
+        <option value="$PROJECT_DIR$/leetcode/pom.xml" />
+        <option value="$PROJECT_DIR$/boot3-04-web/pom.xml" />
       </list>
     </option>
   </component>

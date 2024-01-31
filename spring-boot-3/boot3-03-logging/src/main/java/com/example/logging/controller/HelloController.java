@@ -14,12 +14,14 @@ public class HelloController {
     @GetMapping ("/h")
     public String hello(String a, String b) {
 
-        log.trace("trace日志....");
-        log.debug("debug日志....");
-        // SpringBoot底层默认的日志级别是info
-        log.info("info日志.... 参数a:{} b:{}", a,b);
-        log.warn("warn日志....");
-        log.error("error日志....");
+        for (int i = 0; i < 1000; i++) {
+            log.trace("trace日志....");
+            log.debug("debug日志....");
+            // SpringBoot底层默认的日志级别是info
+            log.info("info日志.... 参数a:{} b:{}", a,b);
+            log.warn("warn日志....");
+            log.error("error日志....");
+        }
 
         return "hello";
     }
