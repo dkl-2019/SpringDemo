@@ -4,7 +4,11 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        int[] num1 = {1, 2, 3, 0, 0, 0};
+        int[] num2 = {2, 5, 6};
+        int m = 3;
+        int n = 3;
+
     }
 
     public void merge(int[] nums1, int m, int[] nums2, int n) {
