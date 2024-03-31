@@ -4,7 +4,7 @@ import com.atguigu.boot.controller.bean.Person;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication
+@SpringBootApplication  // 该注解标注的类就是主程序类
 public class MainApplication {
     public static void main(String[] args) {
         // java10: 局部变量类型自动推断
