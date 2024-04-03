@@ -1,6 +1,7 @@
 package com.atguigu.web.controller;
 
 
+import com.atguigu.web.bean.Person;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -30,4 +31,26 @@ public class HelloController {
         return uri;
     }
 
+    /**
+     * 1、默认支持把对象写为json。因为默认Web场景导入了jackson处理json的包。jackson-core
+     * 2、jackson也支持把数据写为xml。导入xml相关依赖
+     * @return
+     */
+    @GetMapping("/persion")
+    public Person person() {
+        Person person = new Person();
+        person.setId(1L);
+        person.setUserName("张三");
+        person.setEmail("aaa@qq.com");
+        person.setAge(18);
+        return person;
+    }
+
 }
+
+
+
+
+
+
+

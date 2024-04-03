@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -18,7 +18,7 @@ th:utext: 替换标签体的内容; 不会转义html标签，真正显示为html
 <hr/>
 转大写
 <h1 th:text="${#strings.toUpperCase(name)}"></h1>
-<h1 th:text="${'前缀：'+name+'后缀'}"></h1>
+<h1 th:text="${'前缀：' + name + '后缀'}"></h1>
 拼串
 <h1 th:text="|前缀哈哈 ${name} 后缀呵呵|"></h1>
 
