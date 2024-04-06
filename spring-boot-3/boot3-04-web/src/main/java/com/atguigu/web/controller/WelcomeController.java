@@ -4,8 +4,10 @@ import com.atguigu.web.bean.Person;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.Arrays;
 import java.util.List;
@@ -33,7 +35,6 @@ public class WelcomeController {
 
         model.addAttribute("name",name);
 
-
         // 路径是动态的
         model.addAttribute("imgUrl","/6.jpg");
         // 数据库查出的样式
@@ -41,6 +42,16 @@ public class WelcomeController {
 
         model.addAttribute("show",true);
         return "welcome";
+    }
+
+    /**
+     * 来到首页
+     * @return
+     */
+    @GetMapping("/")
+    public String index() {
+
+        return "index";
     }
 
     @GetMapping("/list")
@@ -56,7 +67,15 @@ public class WelcomeController {
         // 将list数据共享给页面
         model.addAttribute("persons", list);
 
+        int i = 10/0;
         return "list";
+    }
+
+    @ResponseBody
+    @ExceptionHandler(Exception.class)
+    public String handleException(Exception e) {
+
+        return "报错，原因：" + e.getMessage();
     }
 
 }

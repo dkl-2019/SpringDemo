@@ -4,9 +4,12 @@ package com.atguigu.web.controller;
 import com.atguigu.web.bean.Person;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
+import java.util.Locale;
 
 @Slf4j
 @RestController
@@ -44,6 +47,17 @@ public class HelloController {
         person.setEmail("aaa@qq.com");
         person.setAge(18);
         return person;
+    }
+
+    @Autowired  //国际化取消息用的组件
+    MessageSource messageSource;
+    @GetMapping("/haha")
+    public String haha(HttpServletRequest request){
+
+        Locale locale = request.getLocale();
+        //利用代码的方式获取国际化配置文件中指定的配置项的值
+        String login = messageSource.getMessage("login", null, locale);
+        return login;
     }
 
 }
