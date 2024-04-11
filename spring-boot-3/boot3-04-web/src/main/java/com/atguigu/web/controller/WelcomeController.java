@@ -71,11 +71,6 @@ public class WelcomeController {
         return "list";
     }
 
-    @ResponseBody
-    @ExceptionHandler(Exception.class)
-    public String handleException(Exception e) {
 
-        return "报错，原因：" + e.getMessage();
-    }
 
 }
