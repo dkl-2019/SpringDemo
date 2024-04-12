@@ -14,7 +14,7 @@ public class GlobalExceptionHandler {
      * @param e
      * @return
      */
-    @ResponseBody
+    @ResponseBody   // 对象写出为json
     @ExceptionHandler(Exception.class)
     public String handleException(Exception e) {
 
