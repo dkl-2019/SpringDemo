@@ -1,7 +1,9 @@
 package com.atguigu.web.controller;
 
 import com.atguigu.web.bean.Person;
+import com.atguigu.web.service.AService;
 import jakarta.servlet.http.HttpServletRequest;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -14,6 +16,9 @@ import java.util.List;
 
 @Controller // 适配服务端渲染技术，前后端不分离模式
 public class WelcomeController {
+
+    @Autowired
+    AService aService;
 
     /**
      * 利用模板引擎跳转到指定页面
