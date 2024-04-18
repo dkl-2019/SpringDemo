@@ -40,6 +40,8 @@ public class WelcomeController {
 
         model.addAttribute("name",name);
 
+        aService.a();
+
         // 路径是动态的
         model.addAttribute("imgUrl","/6.jpg");
         // 数据库查出的样式
