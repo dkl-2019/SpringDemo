@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.webjars.npm:types__lodash:4.14.202">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/webjars/npm/types__lodash/4.14.202/types__lodash-4.14.202.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/webjars/npm/types__lodash/4.14.202/types__lodash-4.14.202-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/webjars/npm/types__lodash/4.14.202/types__lodash-4.14.202-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
